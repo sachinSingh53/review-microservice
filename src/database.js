@@ -54,5 +54,6 @@ const databaseConnection = async()=>{
 }
 
 export{
-    databaseConnection
+    databaseConnection,
+    pool
 }

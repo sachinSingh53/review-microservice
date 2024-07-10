@@ -1,12 +1,12 @@
 import{verifyGatewayRequest} from '../../9-jobber-shared/src/gateway-middleware.js';
-// import { healthRoute } from './routes/health.js';
-// import { orderRoutes } from './routes/order.js';
+import { healthRoutes } from './routes/health.js';
+import { reviewRoutes } from './routes/review.js';
 
-// const BASE_PATH = '/api/v1/review';
+const BASE_PATH = '/api/v1/review';
 
 const appRoutes = (app)=>{
-    // app.use('',healthRoute());
-    // app.use(BASE_PATH,verifyGatewayRequest,orderRoutes());
+    app.use('',healthRoutes());
+    app.use(BASE_PATH,verifyGatewayRequest,reviewRoutes());
 }
 
 export{appRoutes};
