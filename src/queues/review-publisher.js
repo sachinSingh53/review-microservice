@@ -1,7 +1,9 @@
-import { winstonLogger } from '../../../9-jobber-shared/src/logger.js'
+// import { winstonLogger } from '../../../9-jobber-shared/src/logger.js'
+import config from '../config.js'
+import { winstonLogger } from '@sachinsingh53/jobber-shared';
 import { createConnection } from './connection.js'
 
-const log = winstonLogger('reviewServiceProducer', 'debug');
+const log = winstonLogger(`${config.ELASTIC_SEARCH_URL}`,'reviewServiceProducer', 'debug');
 
 async function publishFanoutMessage(channel, exchangeName, message, logMessage) {
     try {

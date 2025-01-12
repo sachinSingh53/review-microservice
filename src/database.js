@@ -2,9 +2,10 @@
 import config from './config.js'
 import pkg from 'pg';
 const {Pool} = pkg
-import {winstonLogger} from '../../9-jobber-shared/src/logger.js';
+// import {winstonLogger} from '../../9-jobber-shared/src/logger.js';
+import {winstonLogger} from '@sachinsingh53/jobber-shared';
 
-const log = winstonLogger('ReviewServer', 'debug');
+const log = winstonLogger(`${config.ELASTIC_SEARCH_URL}`,'ReviewServer', 'debug');
 
 const pool = new Pool({
     host:`${config.DATABASE_HOST}`,

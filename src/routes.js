@@ -1,4 +1,5 @@
-import{verifyGatewayRequest} from '../../9-jobber-shared/src/gateway-middleware.js';
+// import{verifyGatewayRequest} from '../../9-jobber-shared/src/gateway-middleware.js';
+import{verifyGatewayRequest} from '@sachinsingh53/jobber-shared';
 import { healthRoutes } from './routes/health.js';
 import { reviewRoutes } from './routes/review.js';
 
